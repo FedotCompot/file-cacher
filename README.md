@@ -15,11 +15,11 @@ Configuration is managed via environment variables or configuration files:
 
 ## Running with Docker
 
-You can use the provided `Dockerfile` or `Dockerfile.dev` for containerized deployment.
+You can use the `ghcr.io/fedotcompot/file-cacher` or build using provided `Dockerfile` for containerized deployment.
+
 
 ```sh
-docker build -t file-cacher .
-docker run -e REDIS_URL=redis://host:port -e PUBLIC_HOSTNAME=your.host -e LISTEN_ADDR=":8080" -e CACHE_TTL=1h file-cacher
+docker run -e REDIS_URL=redis://host:port -e PUBLIC_HOSTNAME=your.host -e LISTEN_ADDR=":8080" -e CACHE_TTL=1h ghcr.io/fedotcompot/file-cacher
 ```
 
 ## Usage
