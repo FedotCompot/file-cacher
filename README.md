@@ -10,7 +10,7 @@ Configuration is managed via environment variables or configuration files:
 
 -   `REDIS_URL`: Connection string for the Redis backend. (e.g. `redis://localhost:6379/0`)
 -   `PUBLIC_HOSTNAME`: The hostname clients use to access cached files. (default: `http://localhost:8080`)
--   `LISTEN_ADDR`: The address and port the service listens on (default: `:8080`).
+-   `LISTENER`: The address and port the service listens on (default: `:8080`).
 -   `CACHE_TTL`: Default time-to-live for cached files using go duration syntaz (e.g., `60s`, `10min`, `1h`).
 
 ## Running with Docker
