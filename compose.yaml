@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    environment:
+      REDIS_URL: redis://cache:6379/0
+      CACHE_TTL: 60s
+      JWT_SECRET: shdgbfwebofaneifbnseibfiskedbfisbefibskjdbnfkjsbefkjbseikjf
+    ports:
+      - 8080:8080
+  cache:
+    image: docker.dragonflydb.io/dragonflydb/dragonfly:latest
+    restart: unless-stopped
+    ulimits:
+      memlock: -1
